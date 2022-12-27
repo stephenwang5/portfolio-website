@@ -3,8 +3,23 @@
   export let imagePath : string;
 </script>
 
-<h3>{itemName}</h3>
+<div class="summary-item">
+  <img src={imagePath} alt={`${itemName} summary image`}/>
+  <div>
+    <h2>{itemName}</h2>
+    <slot />
+  </div>
+</div>
 
-<img src={imagePath} alt={`${itemName} summary image`}/>
-
-
+<style>
+  img {
+    width: 40%;
+    padding: 12px;
+  }
+  .summary-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
