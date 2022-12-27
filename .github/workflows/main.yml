@@ -24,6 +24,6 @@ jobs:
         npm run build
 
     - name: serve
-      uses: actions/deploy-pages@1.2.3
+      uses: actions/deploy-pages@v1.2.3
       with:
         artifact_name: build
