@@ -1,0 +1,29 @@
+name: "build and serve"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+  pull_request:
+
+jobs:
+
+  build-and-serve:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - name: build
+      uses: actions/setup-node@v3.5.1
+
+    - run: |
+        npm i
+        npm run build
+
+    - name: serve
+      uses: actions/deploy-pages@1.2.3
+      with:
+        artifact_name: build
