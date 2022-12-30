@@ -1,31 +1,60 @@
 <script lang="ts">
-  import SummaryItem from "$lib/SummaryItem.svelte";
-  import "./FontSettings.css";
+  import { fly } from "svelte/transition";
+  import { onMount } from "svelte";
+
+  let started = false;
+
+  onMount(() => {
+    started = true;
+  });
 </script>
 
-<body>
-  <h1>Software</h1>
+<div id="body">
 
-  <SummaryItem itemName="TCLAS" imagePath="electrans/diagram.png">
-    <p>sdfhklsdflkjsldjkf</p>
-  </SummaryItem>
+  <div id="intro">
 
-  <SummaryItem itemName="TCLAS" imagePath="electrans/diagram.png">
-    <p>sdfhklsdflkjsldjkf</p>
-  </SummaryItem>
+    {#if started}
+    <img in:fly={{ x: -50, duration: 1000 }}
+      src="headshot.jpeg" alt="My profile pic"/>
 
-  <SummaryItem itemName="TCLAS" imagePath="electrans/diagram.png">
-    <p>sdfhklsdflkjsldjkf</p>
-  </SummaryItem>
+    <div in:fly={{ x: 50, duration: 1000 }}
+      id="greeting">
+      <h1>Hi! I'm Xiren.</h1>
+      <h1>You can call me Stephen.</h1>
+    </div>
+    {/if}
 
-  <SummaryItem itemName="TCLAS" imagePath="electrans/diagram.png">
-    <p>sdfhklsdflkjsldjkf</p>
-  </SummaryItem>
+  </div>
 
-</body>
+  <p>
+    I'm a 3rd year Mechatronics Engineering student at the University of Waterloo
+  </p>
+
+  <p>
+    I love IoT, robotics, and deep learning :D
+  </p>
+
+</div>
 
 <style>
-  h1 {
+  #body {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    height: 80vh;
+    justify-content: space-evenly;
+  }
+  #intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #greeting {
+    text-align: left;
+    padding-left: 20px;
+  }
+  #intro img {
+    width: 30%;
   }
 </style>
