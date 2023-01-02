@@ -14,10 +14,10 @@
   <div id="intro">
 
     {#if started}
-    <img in:fly={{ x: -50, duration: 1000 }}
+    <img in:fly={{ x: -50, duration: 700 }}
       src="headshot.jpeg" alt="My profile pic"/>
 
-    <div in:fly={{ x: 50, duration: 1000 }}
+    <div in:fly={{ x: 50, duration: 700 }}
       id="greeting">
       <h1>Hi! I'm Xiren.</h1>
       <h1>You can call me Stephen.</h1>
