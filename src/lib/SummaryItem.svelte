@@ -5,6 +5,7 @@
   export let imagePath : string;
   export let tags : Array<string>;
   export let filter : Array<string>;
+  export let tagHandler = (name: string) => {};
 
   let tagsSet = new Set(tags);
   tagsSet.add("");
@@ -16,7 +17,7 @@
 
 {#if shouldShow(filter)}
 
-<div class="summary-item">
+<div class="hori-flex summary">
 
   <img src={imagePath} alt={`${itemName} summary image`}/>
 
@@ -26,9 +27,11 @@
 
     <slot />
 
-    {#each tags as tag}
-    <Tag name={tag} />
-    {/each}
+    <div class="hori-flex tags">
+      {#each tags as tag}
+      <Tag name={tag} tagHandler={tagHandler}/>
+      {/each}
+    </div>
 
   </div>
 
@@ -38,12 +41,18 @@
 
 <style>
   img {
-    width: 40%;
+    width: 40vw;
     padding: 12px;
   }
-  .summary-item {
+  .hori-flex {
     display: flex;
     flex-direction: row;
+  }
+  .summary{
     justify-content: center;
+  }
+  .tags {
+    flex-wrap: wrap;
+    width: 30vw;
   }
 </style>

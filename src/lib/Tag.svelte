@@ -2,24 +2,32 @@
   import Cross from "./Cross.svelte";
 
   export let name : string;
-  export let clickHandler = () => {};
+  export let tagHandler = (name: string) => {};
 
   export let withDismiss : boolean = false;
-  export let dismissHandler = () => {};
+  export let dismissHandler = (name: string) => {};
+
+  function tagClick(e: MouseEvent) {
+    tagHandler(name);
+  }
+
+  function dismiss(e: MouseEvent) {
+    dismissHandler(name);
+  }
 </script>
 
 <div class="container">
 
   {#if !withDismiss}
-  <button class="btn tag" on:click={clickHandler}> #{name} </button>
+  <button class="btn tag" on:click={tagClick}> #{name} </button>
   {/if}
 
   {#if withDismiss}
   <div class="no-space">
-    <button class="btn tag-dismiss" on:click={clickHandler}> #{name} </button>
+    <button class="btn tag-dismiss" on:click={tagClick}> #{name} </button>
   </div>
   <div class="no-space">
-    <button class="btn dismiss" on:click={dismissHandler}><Cross /></button>
+    <button class="btn dismiss" on:click={dismiss}><Cross /></button>
   </div>
   {/if}
 
@@ -29,7 +37,15 @@
   $bgcolor: rgb(255, 225, 225);
   $txtcolor: rgb(141, 141, 141);
 
-  .btn{
+  .container {
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .btn {
     background-color: $bgcolor;
     transition: background-color 0.1s ease;
     color: $txtcolor;
@@ -62,17 +78,10 @@
   .dismiss {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    height: 17px;
   }
 
   .no-space {
     font-size: 0;
-  }
-
-  .container {
-    padding-right: 4px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    display: flex;
-    flex-direction: row;
   }
 </style>
