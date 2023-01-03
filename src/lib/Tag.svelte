@@ -25,8 +25,6 @@
   {#if withDismiss}
   <div class="no-space">
     <button class="btn tag-dismiss" on:click={tagClick}> #{name} </button>
-  </div>
-  <div class="no-space">
     <button class="btn dismiss" on:click={dismiss}><Cross /></button>
   </div>
   {/if}
@@ -53,6 +51,7 @@
     border-radius: 8px;
     cursor: pointer;
     border-style: none;
+    margin: 0; // for safari
 
     &:hover {
       background-color: darken($bgcolor, 5);
@@ -73,15 +72,19 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     padding-right: 0;
+    margin: 0;
   }
 
   .dismiss {
+    margin: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    height: 17px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
   }
 
   .no-space {
-    font-size: 0;
+    display: inline-flex;
   }
 </style>

@@ -42,6 +42,7 @@
 <style>
   img {
     width: 40vw;
+    height: auto;
     padding: 12px;
   }
   .hori-flex {
