@@ -3,6 +3,7 @@
 </script>
 
 <div id="nav-bar">
+  <a href="resume"><b>Resume</b></a>
   <a href="projects"><b>Projects</b></a>
   <a href="blog"><b>Blog</b></a>
   <a href="photography"><b>Photography</b></a>
@@ -14,10 +15,13 @@
   #nav-bar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
   }
   a {
     padding-left: 12px;
     padding-right: 12px;
+    margin: auto;
   }
 </style>
