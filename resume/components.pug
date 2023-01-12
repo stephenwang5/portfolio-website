@@ -1,0 +1,15 @@
+mixin entry(position, company, location, from, to, link)
+  .entry
+    .title
+      .left
+        if link
+          .position
+            a(href=$link) position
+        else
+          .position= position
+        .company= "| " + company
+      .right
+        .location= location
+        if from && to
+          .time= "| " + from + " — " + to
+    block

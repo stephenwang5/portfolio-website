@@ -31,6 +31,7 @@ jobs:
       - name: build
         run: |
             npm i
+            npm run build-resume
             npm run build
 
       - name: Setup Pages

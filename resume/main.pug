@@ -1,0 +1,60 @@
+include components.pug
+
+.name Stephen Xiren Wang
+//- .subtitle 3rd year UWaterloo Mechatronics Engineering Undergrad
+
+.links
+  a(href="https://sxwang.dev") sxwang.dev
+  a(href="mailto:stephen@sxwang.dev") stephen@sxwang.dev
+  a(href="https://github.com/stephenwang5") GitHub
+  a(href="https://linkedin.com/in/stephen-xiren-wang") LinkedIn
+
+.section
+  .header INTERNSHIPS
+
+  +entry("MECHATRONICS ENGINEERING INTERN", "ELECTRANS",
+         "Oakville, ON", "Sept 2022", "Dec 2022")
+    ul
+      li Created an IoT SCADA framework to control mechanical test fixtures using Python and MQTT
+      li Logged data collected from test fixtures using Go, MySQL, and InfluxDB
+      li Displayed test fixture status, manual control, and automatic control in a web app using SvelteKit
+      li Designed and tested a resistance meter PCB in the milliohm range
+      li Designed and 3D printed switch box featuring compliant mating clips
+
+  +entry("MACHINE LEARNING DEVELOPER", "ENLIGHTED",
+         "Kitchener, ON", "Jan 2022", "Apr 2022")
+    ul
+      li Determined indoor locations of Bluetooth Low Energy emitters using a sequence of measured RSSI
+      li Trained LSTM classifiers using data collected from medical facilities in TF2 Keras, achieving 90% accuracy
+      li Wrote a full-stack data collection web app and a real-time model inference visualizer using Flask and Dash
+
+  +entry("EMBEDDED MACHINE VISION DEVELOPER", "ARCTURUS NETWORKS",
+         "Toronto, ON", "May 2021", "Aug 2021")
+    ul
+      li Created a Python framework for real-time computer vision inference that interoperates with C++
+      li Deployed an inference-at-the-edge application using that framework by containerizing process nodes
+      li Integrated a SlowFast action classification model to detect violent actions
+      li Optimized model runtime and reduced memory consumption by 50%
+
+  +entry("MECHATRONICS ENGINEERING INTERN", "ENGINEERING IDEAS CLINIC",
+         "Waterloo, ON", "Sept 2020", "Dec 2020")
+    ul
+      li Implemented an Industrial IoT SCADA solution using Ignition for a classroom activity
+      li Controlled 4 conveyor belts via a computer network instead of relying on serial communication
+      li Programmed NVIDIA Jetson Nano to identify conveyor payload and to send I2C commands to STM32 embedded in the robot arm
+
+.section
+  .header STUDENT DESIGN TEAMS
+  +entry("SERVER CLUSTER LEAD", "WATONOMOUS SELF-DRIVING TEAM", "Waterloo, ON")
+
+.section
+  .header PROJECT
+
+.section
+  .header EDUCATION
+
+.section
+  .header SKILLS
+
+style
+  include:scss styles.scss

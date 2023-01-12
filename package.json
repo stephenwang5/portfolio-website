@@ -4,7 +4,9 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"dev-resume": "relaxed resume/main.pug resume/resume.pdf",
 		"build": "vite build",
+		"build-resume": "relaxed resume/main.pug --bo static/stephen-xiren-wang-resume.pdf",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
@@ -13,6 +15,7 @@
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/adapter-static": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
+		"relaxedjs": "github:stephenwang5/ReLaXed",
 		"sass": "^1.57.1",
 		"svelte": "^3.54.0",
 		"svelte-check": "^2.9.2",
