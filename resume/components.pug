@@ -1,15 +1,28 @@
 mixin entry(position, company, location, from, to, link)
   .entry
     .title
+
       .left
+
         if link
           .position
-            a(href=$link) position
+            a(href=link)= position
         else
           .position= position
-        .company= "| " + company
+
+        if company
+          .company= "| " + company.toUpperCase()
+
       .right
-        .location= location
-        if from && to
-          .time= "| " + from + " — " + to
+
+        if location
+          .location= location
+        if from
+            if to
+              .time= "| " + from + " — " + to
+            else if !location
+              .time= from
+            else
+              .time= "| " + from
+
     block

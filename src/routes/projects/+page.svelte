@@ -73,7 +73,7 @@
 
 <body>
 
-  <h1>Project Summary</h1>
+  <h1>Project List</h1>
 
   <button on:click={clearFilter}>Clear Tags</button>
 

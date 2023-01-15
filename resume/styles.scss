@@ -2,8 +2,9 @@
 
 body {
   font-family: "Lato";
+  font-size: 11pt;
   font-display: swap;
-  margin: 1cm;
+  margin: 1.2cm;
   margin-top: 7mm;
 }
 
@@ -18,7 +19,7 @@ body {
   justify-content: center;
   a {
     font-weight: 300;
-    text-decoration: none;
+    font-size: 9pt;
     margin: 2px;
     margin-left: 8px;
     margin-right: 8px;
@@ -29,38 +30,44 @@ body {
 .section {
   .header {
     font-weight: 300;
-    font-size: 22px;
+    font-size: 16pt;
     color: rgb(122, 122, 122);
     margin-bottom: 3px;
   }
 }
 
 .entry {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 
   .title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 6px;
 
     .left {
       display: flex;
       flex-direction: row;
       align-items: center;
       .position {
+        font-size: 13pt;
         font-weight: 700;
         margin-right: 4px;
+        a {
+          font-weight: inherit;
+          color: inherit;
+        }
       }
       .company {
-        font-size: 12px;
+        font-size: 8pt;
       }
     }
 
     .right {
       display: flex;
       flex-direction: row;
-      font-size: 14px;
+      font-size: 10pt;
       color: rgb(122, 122, 122);
       .location {
         margin-right: 4px;
@@ -72,5 +79,20 @@ body {
     margin: 0;
     padding-left: 20px;
     font-weight: 300;
+  }
+}
+
+.courses {
+  font-weight: 300;
+  font-size: 10pt;
+}
+
+.skills {
+  font-weight: 300;
+  font-size: 9.5pt;
+  display: flex;
+  flex-direction: row;
+  .left {
+    width: 36vw;
   }
 }

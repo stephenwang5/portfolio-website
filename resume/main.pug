@@ -12,7 +12,7 @@ include components.pug
 .section
   .header INTERNSHIPS
 
-  +entry("MECHATRONICS ENGINEERING INTERN", "ELECTRANS",
+  +entry("Mechatronics Engineering Intern", "Electrans",
          "Oakville, ON", "Sept 2022", "Dec 2022")
     ul
       li Created an IoT SCADA framework to control mechanical test fixtures using Python and MQTT
@@ -21,14 +21,14 @@ include components.pug
       li Designed and tested a resistance meter PCB in the milliohm range
       li Designed and 3D printed switch box featuring compliant mating clips
 
-  +entry("MACHINE LEARNING DEVELOPER", "ENLIGHTED",
+  +entry("Machine Learning Developer", "Enlighted",
          "Kitchener, ON", "Jan 2022", "Apr 2022")
     ul
       li Determined indoor locations of Bluetooth Low Energy emitters using a sequence of measured RSSI
       li Trained LSTM classifiers using data collected from medical facilities in TF2 Keras, achieving 90% accuracy
       li Wrote a full-stack data collection web app and a real-time model inference visualizer using Flask and Dash
 
-  +entry("EMBEDDED MACHINE VISION DEVELOPER", "ARCTURUS NETWORKS",
+  +entry("Embedded Machine Vision Developer", "Arcturus Networks",
          "Toronto, ON", "May 2021", "Aug 2021")
     ul
       li Created a Python framework for real-time computer vision inference that interoperates with C++
@@ -36,7 +36,7 @@ include components.pug
       li Integrated a SlowFast action classification model to detect violent actions
       li Optimized model runtime and reduced memory consumption by 50%
 
-  +entry("MECHATRONICS ENGINEERING INTERN", "ENGINEERING IDEAS CLINIC",
+  +entry("Mechatronics Engineering Intern", "Engineering IDEAs Clinic",
          "Waterloo, ON", "Sept 2020", "Dec 2020")
     ul
       li Implemented an Industrial IoT SCADA solution using Ignition for a classroom activity
@@ -45,16 +45,61 @@ include components.pug
 
 .section
   .header STUDENT DESIGN TEAMS
-  +entry("SERVER CLUSTER LEAD", "WATONOMOUS SELF-DRIVING TEAM", "Waterloo, ON")
+  +entry("Server Cluster Lead", "WATonomous Self-Driving Team",
+         "Waterloo, ON", "Jan 2021", "Aug 2022")
+    ul
+      li Provisioned and maintained a cluster of 10 servers using Proxmox and Ansible
+      li Conducted model-predictive controller tests in closed-loop simulation using CARLA and Simulink
+      li Learned how to effectively communicate technical ideas by leading a team of 10 engineering students
+
+  +entry("Automated Vehicle Member", "UWAFT Hybrid Electric Team",
+         "Waterloo, ON", "Jan 2020", "Sept 2020")
+    ul
+      li Implemented a linear Kalman filter using ROS in Python to fuse radar and camera detection in real time
 
 .section
   .header PROJECT
 
+  +entry("Handwritten Digit Reader", "", "", "Jun 2019", "",
+         "https://github.com/stephenwang5/handwritten-digit-reader")
+    ul
+      li Implemented a densely connected neural network in Python from first principles using Numpy
+      li Learned how to document the design process and finished an independent project from start to finish
+
 .section
   .header EDUCATION
 
+  +entry("University of Waterloo", "3B MECHATRONICS ENGINEERING BASC",
+         "Waterloo, ON", "Sept 2019", "Apr 2024")
+    .courses
+      | <b>Courses</b>
+      | Data Structures and Algorithms,
+      | Microprocessor and Digital Logic,
+      | Real-Time Operating System,
+      | Linear Systems and Signals,
+      | Automatic Control,
+      | Sensors and Instrumentation,
+      | Electromechanical Machine Design,
+      | Fluid Mechanics,
+      | Ordinary Differential Equations,
+      | Linear Algebra
+
 .section
   .header SKILLS
+  .skills
+    .left
+      | <b>Languages</b>
+      | Python, C, Go, JavaScript, C++
+    .right
+      | <b>Robotics & IoT</b>
+      | ROS, MQTT, ZMQ, RViz, Arduino, STM32, S32, NVIDIA Jetson
+  .skills
+    .left
+      | <b>Deep Learning</b>
+      | Keras, Tensorflow, PyTorch, MLFlow
+    .right
+      | <b>Cloud</b>
+      | Linux, Docker, GCP, AWS, Azure, GitHub Actions, Ignition
 
 style
   include:scss styles.scss
