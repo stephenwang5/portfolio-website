@@ -25,7 +25,7 @@
 
     <h2>{itemName}</h2>
 
-    <slot />
+    <div class="content"><slot /></div>
 
     <div class="hori-flex tags">
       {#each tags as tag}
@@ -45,12 +45,17 @@
     height: auto;
     padding: 12px;
   }
+  h2, .content {
+    width: 40vw;
+  }
   .hori-flex {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
   .summary{
     justify-content: center;
+    margin-bottom: 20px;
   }
   .tags {
     flex-wrap: wrap;

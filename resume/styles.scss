@@ -9,6 +9,10 @@ body {
   margin-top: 7mm;
 }
 
+b {
+  font-weight: 600;
+}
+
 .name {
   text-align: center;
   font-size: 24pt;
@@ -94,9 +98,6 @@ body {
 
 .courses {
   font-size: 10pt;
-  b {
-    font-weight: 600;
-  }
 }
 
 .skills {
@@ -104,9 +105,6 @@ body {
   font-size: 8.5pt;
   display: flex;
   flex-direction: row;
-  b {
-    font-weight: 600;
-  }
   .left {
     width: 38vw;
   }
