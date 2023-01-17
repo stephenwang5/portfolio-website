@@ -44,6 +44,7 @@
     width: 40vw;
     height: auto;
     padding: 12px;
+    margin-right: 3vw;
   }
   h2, .content {
     width: 40vw;

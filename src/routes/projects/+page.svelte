@@ -94,12 +94,15 @@
 
   <h1>Project List</h1>
 
-  <button on:click={clearFilter}>Clear Tags</button>
 
-  <div class="hori-flex filters">
-    {#each [...filters] as f}
-    <Tag {...selectedFilters} name={f} />
-    {/each}
+  <div class="hori-flex center">
+    Tags selected to filter:
+    <div class="hori-flex filters user-selection">
+      {#each [...filters] as f}
+      <Tag {...selectedFilters} name={f} />
+      {/each}
+    </div>
+    <button on:click={clearFilter}>Clear Tags</button>
   </div>
 
   <div class="hori-flex">
@@ -214,10 +217,23 @@
   p {
     font-stretch: condensed;
   }
+  .user-selection {
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(103, 103, 103);
+    border-radius: 12px;
+    min-width: 40vw;
+    min-height: 22px;
+    margin-right: 6px;
+    margin-left: 3px;
+  }
   .hori-flex {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+  .center {
+    justify-content: center;
   }
   .filters {
     flex-wrap: wrap;
