@@ -229,6 +229,7 @@
   }
   .hori-flex {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
   }
@@ -237,6 +238,8 @@
   }
   .filters {
     flex-wrap: wrap;
+    min-width: var(--mobile-min-width);
+    max-width: 80vw;
     padding: 5px;
   }
   .filter-prompt {

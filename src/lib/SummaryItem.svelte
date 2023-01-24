@@ -40,17 +40,24 @@
 {/if}
 
 <style>
+  :root {
+    --mobile-min-width: 300px;
+  }
   img {
     width: 40vw;
+    min-width: var(--mobile-min-width);
+    max-width: 700px;
     height: auto;
     padding: 12px;
     margin-right: 3vw;
   }
   h2, .content {
     width: 40vw;
+    min-width: var(--mobile-min-width);
   }
   .hori-flex {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
   }
@@ -61,5 +68,6 @@
   .tags {
     flex-wrap: wrap;
     width: 30vw;
+    min-width: var(--mobile-min-width);
   }
 </style>
