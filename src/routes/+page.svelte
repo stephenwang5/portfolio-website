@@ -27,7 +27,7 @@
   </div>
 
   <p>
-    I'm a 3rd year Mechatronics Engineering student at the University of Waterloo
+    I'm a graduating Mechatronics Engineering student at the University of Waterloo
   </p>
 
   <p>
