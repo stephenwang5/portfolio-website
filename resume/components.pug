@@ -1,4 +1,4 @@
-mixin entry(position, company, location, from, to, link)
+mixin entry(position, company, company_url, location, from, to, link)
   .entry
     .title
 
@@ -11,7 +11,11 @@ mixin entry(position, company, location, from, to, link)
           .position= position
 
         if company
-          .company= "| " + company.toUpperCase()
+          if company_url
+            .company= "| "
+              a(href=company_url)= company.toUpperCase()
+          else
+            .company= "| " + company.toUpperCase()
 
       .right
 

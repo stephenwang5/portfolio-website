@@ -7,6 +7,7 @@ body {
   font-display: swap;
   margin: 1cm;
   margin-top: 7mm;
+  margin-bottom: 0;
 }
 
 b {
@@ -17,25 +18,26 @@ b {
   text-align: center;
   font-size: 24pt;
   font-weight: 600;
+  margin-bottom: 2px;
 }
 
 .links {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: -2px;
-  margin-bottom: 4px;
+  margin-top: 2px;
+  margin-bottom: 20px;
   a {
     font-weight: 300;
     font-size: 9pt;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
     color: black;
   }
 }
 
 .section {
-  margin-bottom: 22px;
+  margin-top: 22px;
   .header {
     font-weight: 400;
     font-size: 15pt;
@@ -71,13 +73,17 @@ b {
         font-size: 8pt;
         font-weight: 500;
         padding-top: 2px;
+        a {
+          font-weight: inherit;
+          color: inherit;
+        }
       }
     }
 
     .right {
       display: flex;
       flex-direction: row;
-      font-size: 10pt;
+      font-size: 9pt;
       font-weight: 500;
       color: rgb(122, 122, 122);
       .location {
@@ -89,6 +95,7 @@ b {
   ul {
     margin: 0;
     padding-left: 20px;
+    font-size: 9pt;
     li {
       margin: 0;
       margin-bottom: 1px;
@@ -97,7 +104,7 @@ b {
 }
 
 .courses {
-  font-size: 10pt;
+  font-size: 9pt;
 }
 
 .skills {

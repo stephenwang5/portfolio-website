@@ -3,42 +3,53 @@ include components.pug
 .name Stephen Xiren Wang
 
 .links
-  a(href="https://sxwang.dev") sxwang.dev
   a(href="mailto:stephen@sxwang.dev") stephen@sxwang.dev
+  a(href="https://sxwang.dev") https://sxwang.dev
   a(href="https://github.com/stephenwang5") GitHub
   a(href="https://linkedin.com/in/stephen-xiren-wang") LinkedIn
 
 .section
-  .header EDUCATION
 
-  +entry("University of Waterloo", "3B BASc Mechatronics engineering",
-         "Waterloo, ON", "Sept 2019", "Apr 2024")
+  +entry("University of Waterloo", "BASc Mechatronics engineering",
+         "",
+         "Waterloo, ON", "June 2024 (expected)")
     .courses
       | <b>Courses</b>
+      | Automatic Feedback Control,
+      | Multi-sensor Data Fusion,
+      | Ordinary Differential Equations,
+      | Computer Networks,
       | Data Structures and Algorithms,
       | Microprocessor and Digital Logic,
       | Real-Time Operating System,
-      | Linear Systems and Signals,
-      | Automatic Control,
-      | Sensors and Instrumentation,
-      | Electromechanical Machine Design,
-      | Fluid Mechanics,
-      | Ordinary Differential Equations,
-      | Linear Algebra
+      | Sensors and Instrumentation
 
 .section
-  .header INTERNSHIPS
+  .header WORK EXPERIENCE
+
+  +entry("Robotic Perception and Path Planning Intern", "Promation",
+         "https://promation.com/",
+         "Oakville, ON", "May 2023", "Aug 2023")
+    ul
+      li Implemented an autonomous software system that can repair cracks on the surfaces of stainless steel parts
+      li Controlled industrial robots with a custom IP networking-based interface to execute algorithms remotely
+      li Generated deposition and machining toolpaths using ModuleWorks and ensured they are collision-free
+      li Coordinated a FANUC robot and a KUKA robot to execute additive toolpaths and subtractive toolpaths
+      li Implemented pointcloud processing algorithms in Python; robot planning and control in C#
 
   +entry("Mechatronics Engineering Intern", "Electrans",
+          "https://electranstech.com/",
          "Oakville, ON", "Sept 2022", "Dec 2022")
     ul
+      li Automated pneumatic and electrical connector product reliability tests made for semitrucks
       li Created a scalable IoT SCADA framework to control mechanical test fixtures using Python and MQTT
       li Logged time-series data at 140MB/fixture/day using concurrent threads in Go into InfluxDB
-      li Displayed test fixture states, manual control, and automatic control in a web app using SvelteKit
+      li Displayed test fixture states, interactive control, and automatic control switch in a web app using SvelteKit
       li Designed and tested a resistance meter PCB in the milliohm range to determine connection quality
       li Designed and 3D printed an actuator control switch box featuring compliant mating clips
 
   +entry("Machine Learning Developer", "Enlighted",
+         "https://www.enlightedinc.com/",
          "Kitchener, ON", "Jan 2022", "Apr 2022")
     ul
       li Determined indoor locations of Bluetooth Low Energy emitters using a sequence of measured RSSI
@@ -46,6 +57,7 @@ include components.pug
       li Wrote a full-stack data collection web app and a real-time model inference visualizer using Flask and Dash
 
   +entry("Embedded Machine Vision Developer", "Arcturus Networks",
+         "https://www.arcturusnetworks.com/",
          "Toronto, ON", "May 2021", "Aug 2021")
     ul
       li Created a modular data processing framework in Python for computer vision inference using the router-dealer paradigm to transport and ingest data in real time
@@ -54,6 +66,7 @@ include components.pug
       li Optimized model runtime and reduced memory consumption by 50%
 
   +entry("Mechatronics Engineering Intern", "Engineering IDEAs Clinic",
+         "https://uwaterloo.ca/engineering-ideas-clinic/",
          "Waterloo, ON", "Sept 2020", "Dec 2020")
     ul
       li Implemented an Industrial IoT SCADA solution using Ignition for a classroom activity
@@ -61,34 +74,37 @@ include components.pug
       li Programmed NVIDIA Jetson Nano to identify conveyor payload and to send I<sup>2</sup>C commands to STM32 embedded in the robot arm
 
 .section
-  .header STUDENT DESIGN TEAMS
+  .header PROJECT EXPERIENCE
   +entry("Server Cluster Lead", "WATonomous Self-Driving Team",
+         "https://watonomous.ca/",
          "Waterloo, ON", "Jan 2021", "Aug 2022")
     ul
-      li Provisioned and maintained a cluster of 10 servers using Proxmox and Ansible
+      li Built and maintained a computer cluster servers using Proxmox and Ansible
       li Conducted model-predictive controller tests in closed-loop simulation using CARLA and Simulink
       li Learned how to effectively communicate technical ideas by leading a team of 10 engineering students
 
   +entry("Automated Vehicle Member", "UWAFT Hybrid Electric Team",
+         "https://www.uwaft.ca/",
          "Waterloo, ON", "Jan 2020", "Sept 2020")
     ul
       li Implemented a linear Kalman filter using ROS in Python to fuse radar and camera detection in real time
 
-.section
-  .header PROJECT
+//- put this in the portfolio list
+//- .section
+//-   .header PROJECT
 
-  +entry("Handwritten Digit Reader", "", "", "Jun 2019", "",
-         "https://github.com/stephenwang5/handwritten-digit-reader")
-    ul
-      li Implemented a densely connected neural network in Python from first principles using Numpy
-      li Learned how to document the design process and finished an independent project from start to finish
+//-   +entry("Handwritten Digit Reader", "", "", "Jun 2019", "",
+//-          "https://github.com/stephenwang5/handwritten-digit-reader")
+//-     ul
+//-       li Implemented a densely connected neural network in Python from first principles using Numpy
+//-       li Learned how to document the design process and finished an independent project from start to finish
 
 .section
   .header SKILLS
   .skills
     .left
       | <b>Languages</b>
-      | Python, C, Go, JavaScript, C++
+      | Python, C, Go, C#, JavaScript, C++
     .right
       | <b>Robotics & IoT</b>
       | ROS, MQTT, ZMQ, RViz, Arduino, STM32, S32, NVIDIA Jetson
