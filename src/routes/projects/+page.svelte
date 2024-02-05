@@ -18,6 +18,7 @@
   }
 
   let projectTags = {
+    crackRepair: ["software", "Python", "C#", "ModuleWorks", "LDED", "Additive Manufacturing", "Milling"],
     tclas: ["software", "cloud", "Python", "Go", "JS", "TS", "C", "MQTT", "Svelte", "Express.js", "GCP", "VM", "Concurrency"],
     rtls: ["software", "Python", "Keras", "TensorFlow", "Bluetooth", "ML", "Deep Learning", "LSTM"],
     actionDetection: ["software", "Python", "C++", "ZMQ", "ML", "Deep Learning", "SlowFast", "Computer Vision", "GPU"],
@@ -45,6 +46,15 @@
   $: summaryConf = {
     tagHandler: addFilter,
     filter: [...filters],
+  }
+
+  $: crackRepairConf = {
+    itemName: "Additive Manufacturing - Automatic Crack Repair",
+    // imagePath: "/crack-repair/robot.png",
+    videoURL: "https://www.youtube.com/embed/0HLrBRBEuLs",
+    height: "30vh",
+    tags: projectTags.crackRepair,
+    ...summaryConf,
   }
 
   $: tclasConf = {
@@ -118,7 +128,7 @@
 
   <div class="hori-flex">
     <div class="filter-prompt">
-      Buzz Words
+      Keywords
     </div>
     <div class="hori-flex filters">
       {#each [...buzzwordSet] as tag}
@@ -126,6 +136,17 @@
       {/each}
     </div>
   </div>
+
+  <SummaryItem {...crackRepairConf}>
+    <p> Industrial robots are built to be very precise and repeatable, but
+      most applications to this day still rely on pre-programmed trajectories.
+      I was very fortunate to have the chance to work on Promation's awesome
+      robotic setup, and to create a robotics perception and planning
+      application. The algorithms in the application run on a PC and interfaces
+      with a KUKA robot and a FANUC robot through custom pendant programs
+      over IP networking.
+    </p>
+  </SummaryItem>
 
   <SummaryItem {...tclasConf}>
     <p>I created a scalable IoT framework so that all test fixtures built for
